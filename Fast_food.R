@@ -60,6 +60,7 @@ fast_food %>%
     theme_classic()
 
 # using facet_wrap to separate restaurants, then plot histograms of cholesterol using colors for bacon
+dev.new()
 fast_food %>%
     ggplot(aes(x=total_fat, fill=bacon))+
     scale_x_binned()+
@@ -68,7 +69,7 @@ fast_food %>%
     labs(x="Total fat (g)",y="Item count")+
     theme(legend.position = c(.82,.25), legend.direction = "horizontal", axis.text.x = element_text(angle = 90))
 
-# goal: produce a model that can classify items into their restaurants
+# future: produce a model that can classify items into their restaurants
 
 
 
